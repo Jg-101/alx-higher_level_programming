@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # 4-print_square.py
-"""Def a square-printing function."""
+"""Defines a square-printing function."""
 
 
 def print_square(size):
