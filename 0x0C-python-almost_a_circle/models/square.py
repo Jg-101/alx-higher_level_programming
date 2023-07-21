@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Module that contains class Square,
-inheritance of class Rectangle
+inheritance of class Rectangle in prog
 """
 from models.rectangle import Rectangle
 
@@ -9,11 +9,11 @@ class Square(Rectangle):
     """ Class Rectangle """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """ Initializes instances """
+        """ Inits instances """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ str special method """
+        """ string special method """
         str_square = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -33,7 +33,7 @@ class Square(Rectangle):
         self.height = value
 
     def __str__(self):
-        """ str special method """
+        """ string special method """
         str_rectangle = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -42,7 +42,7 @@ class Square(Rectangle):
         return str_rectangle + str_id + str_xy + str_size
 
     def update(self, *args, **kwargs):
-        """ update method """
+        """ update method in prog"""
         if args is not None and len(args) is not 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
@@ -60,7 +60,7 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """ Returns a dictionary with attributes """
+        """ Returns a dict with attrs """
         list_atr = ['id', 'size', 'x', 'y']
         dict_res = {}
 

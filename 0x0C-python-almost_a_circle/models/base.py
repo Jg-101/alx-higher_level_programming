@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module that contains class Base """
+""" Mod that contains class Base """
 import json
 import csv
 import os.path
@@ -10,7 +10,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ Initializes instances """
+        """ Inits instances """
         if id is not None:
             self.id = id
         else:
@@ -43,14 +43,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """ JSON string to dictionary """
+        """ JSON str to dictionary """
         if not json_string:
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
-        """ Create an instance """
+        """ Create an instance in prog"""
         if cls.__name__ == "Rectangle":
             new = cls(10, 10)
         else:
@@ -60,7 +60,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ Returns a list of instances """
+        """ Returns a list of instances in prog"""
         filename = "{}.json".format(cls.__name__)
 
         if os.path.exists(filename) is False:
@@ -79,7 +79,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """ Method that saves a CSV file """
+        """ Method that saves a CSV file in prog """
         filename = "{}.csv".format(cls.__name__)
 
         if cls.__name__ == "Rectangle":
@@ -105,7 +105,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """ Method that loads a CSV file """
+        """ Meth that loads a CSV file """
         filename = "{}.csv".format(cls.__name__)
 
         if os.path.exists(filename) is False:

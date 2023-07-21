@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ Module that contains class Rectangle,
-inheritance of class Base
+inheritance of class Base in prog
 """
 from models.base import Base
 
@@ -9,7 +9,7 @@ class Rectangle(Base):
     """ Class Rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initializes instances """
+        """ Inits instances """
         self.width = width
         self.height = height
         self.x = x
@@ -73,11 +73,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """ returns the area of the rectangle object """
+        """ returns the area of the rectangle obj """
         return self.width * self.height
 
     def display(self):
-        """ displays a rectangle """
+        """ disps a rectangle """
         rectangle = self.y * "\n"
         for i in range(self.height):
             rectangle += (" " * self.x)
@@ -86,7 +86,7 @@ class Rectangle(Base):
         print(rectangle, end='')
 
     def __str__(self):
-        """ str special method """
+        """ string special method """
         str_rectangle = "[Rectangle] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
@@ -105,7 +105,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """ method that returs a dictionary with properties """
+        """ method that returns a dict with properties """
         list_atr = ['id', 'width', 'height', 'x', 'y']
         dict_res = {}
 
